@@ -1,0 +1,113 @@
+/*************************************** Custom Variables ****************************************/
+// ----------------------------- start::scrollbar ----------------------------
+$scrollbar-track-bgcolor: #f5f5f587;
+$scrollbar-thumb-bgcolor: #a8a8a8ab;
+$scrollbar-thumb-bgcolor-hover: #a8a8a8;
+// ---------------------------- end::scrollbar --------------------------------
+
+
+%scrollbar {
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $scrollbar-thumb-bgcolor;
+
+        &:hover {
+            background-color: $scrollbar-thumb-bgcolor-hover;
+        }
+    }
+
+    // default
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        scroll-behavior: smooth;
+    }
+}
+
+body{
+    @extend %scrollbar;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    margin: 0;
+    padding: 0;
+}
+
+
+.scrollbar {
+    &:not(.scrollbar-transparent-track)::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: $scrollbar-track-bgcolor;
+    }
+    @extend %scrollbar;
+}
+
+// d(display)-iflex(inline-flex)-jc(justify-content)-sbtw(space-between)
+.d-iflex-jc-sbtw {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.d-iflex-jc-center {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.d-iflex-jc-start {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.d-iflex-jc-around {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.image-overlay-image {
+    position: relative;
+    color: white;
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+}
+
+.users-search-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: initial;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(0,0,0,.06);
+    }
+}
