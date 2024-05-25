@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components\\\\landing\\\\index.js -> ./body/FirstScreen\":{\"id\":\"components\\\\landing\\\\index.js -> ./body/FirstScreen\",\"files\":[\"static/chunks/_app-pages-browser_src_components_landing_body_FirstScreen_js.js\"]}}"
